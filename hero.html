@@ -237,6 +237,15 @@
   .dot.active{background:var(--gold)}
   .arrow{background:rgba(255,255,255,0.03);border-radius:8px;padding:8px;cursor:pointer}
     /*why choose us ends*/
+    /*carausal*/
+      /* marquee style stats (horizontal scroller) */
+  .marquee{display:flex;gap:18px;align-items:center;margin-top:22px;padding:10px;border-radius:12px;border:1px solid rgba(212,175,55,0.12);background:linear-gradient(90deg, rgba(212,175,55,0.02), rgba(255,255,255,0.01));overflow:hidden}
+  .marquee-track{display:flex;gap:28px;align-items:center;white-space:nowrap;animation:marq 18s linear infinite}
+  @keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  .marq-item{display:inline-flex;align-items:center;gap:12px;padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);min-width:160px}
+  .marq-item h4{margin:0;color:var(--gold)}
+  .marq-item p{margin:0;color:var(--muted);font-size:13px}
+    /*carausal ends*/
   </style>
 </head>
 <body>
@@ -471,11 +480,24 @@ display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(2
     <div id="autoDots" style="margin-top:18px;display:flex;justify-content:center;gap:10px;"></div>
   </div>
 </div>
-
-
-
   <!-- why choose us ends-->
-
+<!-- carausal-->
+    
+    <!-- Marquee stats (auto-scroll) -->
+    <div class="marquee fade delay-2" aria-hidden="false">
+      <div class="marquee-track" id="marqTrack">
+        <div class="marq-item"><h4>3+</h4><p>Years of Services</p></div>
+        <div class="marq-item"><h4>150+</h4><p>Happy Clients</p></div>
+        <div class="marq-item"><h4>200+</h4><p>Funnels Built</p></div>
+        <div class="marq-item"><h4>7+</h4><p>Team Members</p></div>
+        <div class="marq-item"><h4>24/7</h4><p>Funnel Monitoring</p></div>
+        <!-- duplicate for smooth loop -->
+        <div class="marq-item"><h4>3+</h4><p>Years of Services</p></div>
+        <div class="marq-item"><h4>150+</h4><p>Happy Clients</p></div>
+      </div>
+    </div>
+  </div>
+    <!--carausal ends-->
 <script>
 function toggleMenu() {
   document.querySelector('.hamburger-menu').classList.toggle('active');
