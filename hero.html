@@ -247,16 +247,17 @@
   .marq-item p{margin:0;color:var(--muted);font-size:13px}
     /*carausal ends*/
     /* unlimited*/
-    /* Unlimited Grid Section */
+    /* Unlimited Grid Section *//* GRID */
 .unlimited-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 24px;
   box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* DEFAULT = 3 columns */
+  gap: 20px;
 }
 
 /* Tile */
@@ -284,7 +285,7 @@
   stroke-width: 1.4;
 }
 
-/* TILE TEXT */
+/* Text */
 .tile h4 {
   margin: 0 0 6px;
   color: #fff;
@@ -300,15 +301,16 @@
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .unlimited-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* TABLET = 2 columns */
   }
 }
 
 @media (max-width: 720px) {
   .unlimited-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* MOBILE ALSO = 2 columns */
   }
 }
+
 
     /*unlimited ends*/
   </style>
