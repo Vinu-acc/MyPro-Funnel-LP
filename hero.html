@@ -220,7 +220,23 @@
     font-size:16px !important;
   }
 }
+/*why choose us*/
+    
+  /* Redesigned area: keep premium spacing, gold borders visible for containers */
+  .section-title{display:flex;align-items:center;gap:12px;margin-top:30px}
+  .section-title h2{font-size:28px;margin:0}
+  .section-sub{color:var(--muted);font-size:14px;margin-top:8px}
 
+  /* Features Carousel (single row slider) */
+  .carousel{position:relative;margin-top:20px}
+  .carousel-track{display:flex;gap:18px;overflow:hidden;padding-bottom:6px}
+  .slide{min-width:320px;background:linear-gradient(180deg,var(--card),#070707);padding:20px;border-radius:12px;border:1px solid rgba(212,175,55,0.18);box-shadow:0 20px 40px rgba(212,175,55,0.06);flex-shrink:0}
+  .slide .icon{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.06));display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:800;font-size:22px;margin-bottom:12px}
+  .carousel-nav{display:flex;gap:10px;align-items:center;margin-top:12px}
+  .dot{width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,0.06)}
+  .dot.active{background:var(--gold)}
+  .arrow{background:rgba(255,255,255,0.03);border-radius:8px;padding:8px;cursor:pointer}
+    /*why choose us ends*/
   </style>
 </head>
 <body>
@@ -362,6 +378,104 @@
 
 </div>
 
+  <!--why choose us-->
+
+    <!-- Redesigned Features Carousel (replaces the earlier simple grid) -->
+ <!-- Centered Automatic Feature Slider (1 card visible, manual dots added) -->
+  
+  <div style="max-width:700px;margin:28px auto 0;text-align:center">
+  <h2 style="margin:0 0 8px;font-size:28px;font-weight:700;color:#ffffff">Why Choose Our AI-Powered Funnels?</h2>
+  <div style="color:#d0d0d0;margin-bottom:18px;font-size:14px">High-converting funnels that work 24/7 — built to convert, not just look pretty.</div>
+
+  <!-- slider wrapper -->
+  <div id="autoSliderWrap" 
+       style="position:relative;overflow:hidden;border-radius:16px;
+              padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02),
+              rgba(255,255,255,0.01));border:1px solid rgba(212,175,55,0.06);
+              box-shadow:0 8px 32px rgba(212,175,55,0.25);">
+    
+    <!-- track -->
+    <div id="autoSliderTrack" 
+         style="display:flex;transition:transform 0.7s cubic-bezier(.22,.9,.24,1);width:100%;">
+
+    <!-- slide 1 -->
+     <!-- slide 1 - AI Chatbot & IVR -->
+<div class="auto-slide" style="flex:0 0 100%;margin:0 20px;padding:26px;border-radius:12px;
+display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(255,255,255,0.45);">
+  <div style="width:84px;height:84px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.04));">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+      <path d="M21 6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l4-4h12a2 2 0 0 0 2-2V6z"/>
+      <path d="M8 10h8"/>
+      <path d="M8 14h4"/>
+    </svg>
+  </div>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff">AI Chatbot & IVR</h3>
+  <p style="margin:0;color:#cfcfcf;font-size:14px">Qualify leads instantly, schedule calls, reduce no-shows with automation.</p>
+</div>
+
+<!-- slide 2 - Conversion Focused -->
+<div class="auto-slide" style="flex:0 0 100%;margin:0 20px;padding:26px;border-radius:12px;
+display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(255,255,255,0.45);">
+  <div style="width:84px;height:84px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.04));">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+      <path d="M3 17l6-6 4 4 8-8"/>
+    </svg>
+  </div>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff">Conversion Focused</h3>
+  <p style="margin:0;color:#cfcfcf;font-size:14px">Tested frameworks designed purely for maximum conversions.</p>
+</div>
+
+<!-- slide 3 - Done-For-You Setup -->
+<div class="auto-slide" style="flex:0 0 100%;margin:0 20px;padding:26px;border-radius:12px;
+display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(255,255,255,0.45);">
+  <div style="width:84px;height:84px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.04));">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+      <path d="M12 8v4l3 3"/>
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+  </div>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff">Done-For-You Setup</h3>
+  <p style="margin:0;color:#cfcfcf;font-size:14px">We build everything while you focus on delivering value.</p>
+</div>
+
+<!-- slide 4 - Performance Tracking -->
+<div class="auto-slide" style="flex:0 0 100%;margin:0 20px;padding:26px;border-radius:12px;
+display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(255,255,255,0.45);">
+  <div style="width:84px;height:84px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.04));">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <path d="M7 12h10"/>
+      <path d="M12 7v10"/>
+    </svg>
+  </div>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff">Performance Tracking</h3>
+  <p style="margin:0;color:#cfcfcf;font-size:14px">A/B testing, dashboards, weekly optimization.</p>
+</div>
+
+<!-- slide 5 - Unlimited Support -->
+<div class="auto-slide" style="flex:0 0 100%;margin:0 20px;padding:26px;border-radius:12px;
+display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(255,255,255,0.45);">
+  <div style="width:84px;height:84px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.04));">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 8v4l2 2"/>
+    </svg>
+  </div>
+  <h3 style="margin:0 0 8px;font-size:20px;color:#fff">Unlimited Support</h3>
+  <p style="margin:0;color:#cfcfcf;font-size:14px">We handle tech, you handle business.</p>
+</div>
+
+
+
+    <!-- dots -->
+    <div id="autoDots" style="margin-top:18px;display:flex;justify-content:center;gap:10px;"></div>
+  </div>
+</div>
+
+
+
+  <!-- why choose us ends-->
+
 <script>
 function toggleMenu() {
   document.querySelector('.hamburger-menu').classList.toggle('active');
@@ -372,6 +486,51 @@ function scrollToForm() {
   if (form) form.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
+//why choose us section
+    <script>
+(function(){
+  const track = document.getElementById('autoSliderTrack');
+  const slides = track.querySelectorAll('.auto-slide');
+  const total = slides.length;
+  const dotsContainer = document.getElementById('autoDots');
+  let idx = 0, timer=null;
 
+  // dots
+  for(let i=0; i<total; i++){
+    const dot = document.createElement('div');
+    dot.style.cssText="width:12px;height:12px;border-radius:50%;background:#555;cursor:pointer;transition:.3s;";
+    if(i===0) dot.style.background="#d4af37";
+    dot.addEventListener('click',()=>goTo(i));
+    dotsContainer.appendChild(dot);
+  }
+  const dots = dotsContainer.querySelectorAll("div");
+
+  const updateDots = () => {
+    dots.forEach((d,i)=> d.style.background = i===idx ? "#d4af37" : "#555");
+  };
+
+const advance = () => {
+    idx = (idx + 1) % total;
+    track.style.transform = `translateX(calc(-${idx*100}% - ${idx*40}px - 20px))`; // <- added -5px
+    updateDots();
+};
+
+const goTo = (i) => {
+    idx = i;
+    track.style.transform = `translateX(calc(-${idx*100}% - ${idx*40}px - 20px))`; // <- added -5px
+    updateDots();
+    resetAuto();
+};
+
+
+  const resetAuto = () => {
+    clearInterval(timer);
+    timer = setInterval(advance, 3000);
+  };
+
+  timer = setInterval(advance, 3000);
+})();
+</script>
+    //why choose us section ends
 </body>
 </html>
