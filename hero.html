@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyProFunnels — Premium Black & Gold (One-Page)</title>
+  <style>
+    /* Existing styles (unchanged) */
+    :root {
+      --gold: #d4af37;
+      --muted: #777;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* NAVBAR STYLES */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .nav-actions button {
+      padding: 10px 20px;
+      border: none;
+      background-color: var(--gold);
+      color: #121212;
+      cursor: pointer;
+    }
+
+    .nav-actions button.ghost {
+      background-color: transparent;
+      border: 2px solid var(--gold);
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+    }
+
+    .hero-left {
+      flex: 1;
+    }
+
+    .hero-right {
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Responsive Nav - Mobile (Hamburger) */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-actions {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .nav-actions button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+
+      .nav a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+      }
+
+      .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: var(--gold);
+      }
+
+      .hamburger-menu.active + nav {
+        display: flex;
+      }
+
+      .nav a {
+        padding: 10px 0;
+      }
+    }
+
+    /* Mobile hamburger menu icon */
+    .hamburger-menu {
+      display: none;
+    }
+
+    /* Icon for the Hamburger menu */
+    .hamburger-menu span {
+      width: 30px;
+      height: 3px;
+      background-color: var(--gold);
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    /* Toggle icon when menu is active */
+    .hamburger-menu.active span:nth-child(1) {
+      transform: rotate(-45deg);
+      position: relative;
+      top: 8px;
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+      transform: rotate(45deg);
+      position: relative;
+      top: -8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- NAV -->
+    <header aria-label="Main navigation">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">MF</div>
+          <div style="line-height:1">
+            <div style="font-weight:800">MyProFunnels <span style="color:var(--gold)">Premium</span></div>
+            <div style="font-size:12px;color:var(--muted)">AI Funnels • Chatbot • IVR • LMS</div>
+          </div>
+        </div>
+
+        <nav aria-label="Site links">
+          <a href="#why">Why</a>
+          <a href="#unlimited">Unlimited</a>
+          <a href="#process">Process</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="ghost" onclick="scrollToForm()">Want Proofs?</button>
+          <button class="btn" onclick="scrollToForm()">Book Call — ₹1999 Value</button>
+        </div>
+
+        <!-- Hamburger menu -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO (unchanged) -->
+    <div class="hero" role="main">
+      <div class="hero-left fade delay-1">
+        <div class="eyebrow">Attention Coaches, Consultants & Business Owners</div>
+        <h1>Is Your Funnel <span style="color:var(--gold)">Holding You Back?</span></h1>
+        <div class="lead">Stop wasting money on funnels that don't convert. Upgrade to an all-in-one AI marketing & automation system with chatbot, IVR, LMS and done-for-you funnels that perform 24/7.</div>
+
+        <div class="cta-row">
+          <button class="btn" onclick="scrollToForm()">Book A Free One-On-One Call — ₹1999 Value</button>
+          <a class="ghost" href="#proofs" onclick="scrollTo('proofs')">Want To See Real Proofs?</a>
+        </div>
+
+        <div class="mini-stats">
+          <div class="stat"><h4>3+</h4><p>Years of Services</p></div>
+          <div class="stat"><h4>150+</h4><p>Clients Served</p></div>
+          <div class="stat"><h4>200+</h4><p>Funnels Built</p></div>
+        </div>
+      </div>
+
+      <div class="hero-right fade delay-2">
+        <div class="device floaty" role="img" aria-label="Product mockup" style="filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));">
+          <svg viewBox="0 0 800 520" width="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="display:block;border-radius:14px">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#060606"/>
+                <stop offset="1" stop-color="#080808"/>
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" rx="14" fill="url(#g)"/>
+            <g transform="translate(36,40)">
+              <rect x="0" y="0" width="720" height="440" rx="14" fill="#060606" stroke="rgba(255,255,255,0.03)"/>
+              <text x="28" y="46" fill="#d4af37" font-family="Montserrat" font-size="28" font-weight="800">MyProFunnels — Live Launch</text>
+              <rect x="28" y="66" width="380" height="180" rx="12" fill="#070707" stroke="rgba(255,255,255,0.03)"/>
+              <text x="44" y="115" fill="#ffffff" font-family="Playfair Display" font-size="24">Done For You Funnel</text>
+              <text x="44" y="142" fill="#cfcfcf" font-size="16">Chatbot • IVR • LMS • Automations</text>
+              <g transform="translate(44,260)">
+                <rect x="0" y="0" width="350" height="140" rx="10" fill="#050505" stroke="rgba(212,175,55,0.08)"/>
+                <polyline points="12,110 90,64 168,92 240,46 320,80" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <rect x="420" y="76" width="280" height="56" rx="10" fill="rgba(212,175,55,0.10)"/>
+              <text x="438" y="110" fill="#d4af37" font-size="18" font-weight="700">Book Free Call — ₹1999 Value</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const hamburger = document.querySelector('.hamburger-menu');
+      hamburger.classList.toggle('active');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+
+    function scrollToForm() {
+      window.scrollTo({ top: document.getElementById('form').offsetTop, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
