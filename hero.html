@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MyProFunnels — Premium Black & Gold (One-Page)</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --black: #000000;
@@ -15,53 +16,50 @@
       --glass: rgba(255, 255, 255, 0.02);
       --maxw: 1200px;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     html, body {
-      height: 100%;
       margin: 0;
       background: var(--black);
       color: #fff;
-      font-family: 'Montserrat', system-ui, Arial;
-      -webkit-font-smoothing: antialiased;
+      font-family: 'Montserrat', system-ui;
     }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+
     .wrap {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 28px;
+      padding: 28px 18px;
     }
 
-    /* NAV (unchanged) */
+    /* NAVBAR */
     header {
       position: sticky;
-      top: 12px;
-      z-index: 60;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-      border-radius: 12px;
-      padding: 10px 14px;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border-radius: 16px;
+      padding: 14px 18px;
       margin-bottom: 22px;
-      border: 1px solid rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
     }
+
     .nav {
       display: flex;
       align-items: center;
-      gap: 14px;
+      justify-content: space-between;
       max-width: var(--maxw);
       margin: 0 auto;
-      justify-content: space-between;
+      gap: 24px;
     }
+
     .brand {
       display: flex;
-      gap: 12px;
       align-items: center;
+      gap: 12px;
     }
+
     .logo {
       width: 52px;
       height: 52px;
@@ -76,22 +74,25 @@
       font-size: 18px;
       box-shadow: 0 10px 30px rgba(212, 175, 55, 0.12);
     }
-    nav {
+
+    nav.nav-links {
       display: flex;
       gap: 14px;
-      margin-left: 18px;
+      align-items: center;
     }
-    nav a {
+
+    nav.nav-links a {
       color: var(--muted);
       font-weight: 600;
       padding: 8px 10px;
       border-radius: 8px;
     }
+
     .nav-actions {
-      margin-left: auto;
       display: flex;
       gap: 10px;
     }
+
     .btn {
       background: linear-gradient(90deg, var(--gold), var(--gold-2));
       color: #000;
@@ -100,326 +101,193 @@
       font-weight: 800;
       border: none;
       cursor: pointer;
-      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.12);
+      box-shadow: 0 12px 30px rgba(212,175,55,0.12);
     }
+
     .ghost {
       padding: 8px 12px;
       border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      color: var(--muted);
+      border: 1px solid rgba(255,255,255,0.04);
       background: transparent;
+      color: var(--muted);
+      cursor: pointer;
     }
 
-    /* Hamburger Menu Styles */
+    /* HAMBURGER */
     .hamburger-menu {
       display: none;
       flex-direction: column;
       gap: 6px;
       cursor: pointer;
     }
+
     .hamburger-menu span {
       width: 30px;
       height: 3px;
       background-color: var(--gold);
       transition: 0.3s;
     }
+
     .hamburger-menu.active span:nth-child(1) {
       transform: rotate(45deg);
       position: relative;
       top: 6px;
     }
-    .hamburger-menu.active span:nth-child(2) {
-      opacity: 0;
-    }
+    .hamburger-menu.active span:nth-child(2) { opacity: 0; }
     .hamburger-menu.active span:nth-child(3) {
       transform: rotate(-45deg);
       position: relative;
       top: -6px;
     }
 
-    /* Mobile Menu */
-    .nav-links {
-      display: flex;
-      gap: 14px;
-    }
-
-    /* Mobile version */
+    /* MOBILE NAV */
     @media (max-width: 768px) {
-      .nav-links {
+      nav.nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        gap: 12px;
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 20px;
+        background: rgba(0,0,0,0.9);
+        padding: 22px;
+        border-radius: 16px;
         position: absolute;
-        top: 80px;
+        top: 82px;
         left: 0;
         right: 0;
-        z-index: 50;
-        border-radius: 12px;
+        z-index: 999;
+        gap: 18px;
       }
+
+      nav.nav-links.active { display: flex; }
+
+      .hamburger-menu { display: flex; }
+
       .nav-actions {
         flex-direction: column;
-        gap: 12px;
         width: 100%;
-      }
-      .hamburger-menu {
-        display: flex;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      nav {
-        display: none;
+        gap: 14px;
       }
     }
-  </style>
-  <style>
-  /* HERO (unchanged look) */
-  .hero {
-    display: flex;
-    gap: 36px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 0;
-    flex-wrap: wrap;
-  }
 
-  .hero-left {
-    flex: 1;
-    min-width: 360px;
-  }
-
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, rgba(212,175,55,0.08), rgba(212,175,55,0.04));
-    color: var(--gold);
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  h1 {
-    font-family: 'Playfair Display';
-    font-size: 44px;
-    line-height: 1.05;
-    margin: 18px 0;
-    color: transparent;
-    background: linear-gradient(90deg, var(--gold), #f7e6a8);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-
-  .lead {
-    color: var(--muted);
-    max-width: 680px;
-    margin-bottom: 18px;
-    font-size: 16px;
-  }
-
-  .cta-row {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .mini-stats {
-    display: flex;
-    gap: 12px;
-    margin-top: 18px;
-  }
-  .stat {
-    background: var(--card);
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.03);
-    box-shadow: 0 10px 30px rgba(212,175,55,0.06);
-    text-align: center;
-    min-width: 110px;
-  }
-  .stat h4 {
-    margin: 0;
-    color: var(--gold);
-    font-size: 20px;
-  }
-  .stat p {
-    margin: 6px 0 0;
-    color: var(--muted);
-    font-size: 12px;
-  }
-
-  .hero-right {
-    width: 500px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .device {
-    width: 460px;
-    border-radius: 16px;
-    padding: 18px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border: 1px solid rgba(255,255,255,0.03);
-    box-shadow: 0 20px 60px rgba(255,255,255,0.1);
-  }
-
-  /* 📱 RESPONSIVE: text first → image below */
-  @media (max-width: 768px) {
+    /* HERO */
     .hero {
-      flex-direction: column;
-      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      gap: 36px;
+      padding: 40px 0;
+      flex-wrap: wrap;
     }
 
-    .hero-left {
-      order: 1;
-      width: 100%;
-      padding-bottom: 20px;
-    }
-
-    .hero-right {
-      order: 2;
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .device {
-      width: 100%;
-    }
+    .hero-left { flex: 1; min-width: 360px; }
 
     h1 {
-      font-size: 34px;
-      line-height: 1.1;
+      font-family: 'Playfair Display';
+      font-size: 44px;
+      margin: 18px 0;
+      line-height: 1.05;
+      color: transparent;
+      background: linear-gradient(90deg, var(--gold), #f7e6a8);
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     .lead {
-      font-size: 15px;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 18px;
+      font-size: 16px;
     }
-  }
-</style>
+
+    /* IMAGE BOX RESTORED */
+    .hero-right {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .device {
+      width: 460px;
+      border-radius: 18px;
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 25px 60px rgba(212,175,55,0.18);
+    }
+
+    /* MOBILE: HIDE IMAGE */
+    @media (max-width: 768px) {
+      .hero-right { display: none !important; }
+
+      h1 { font-size: 34px; }
+      .lead { font-size: 15px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- NAV -->
-    <header aria-label="Main navigation">
-      <div class="nav">
-        <div class="brand">
-          <div class="logo">MF</div>
-          <div style="line-height:1">
-            <div style="font-weight:800">MyProFunnels</div>
-            <div style="font-size:12px;color:var(--muted)">AI Funnels • Chatbot • IVR • LMS</div>
-          </div>
-        </div>
+<div class="wrap">
 
-        <!-- Hamburger Menu Icon -->
-        <div class="hamburger-menu" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+  <!-- NAVBAR -->
+  <header aria-label="Main navigation">
+    <div class="nav">
 
-        <!-- Nav Links (hidden on small screens) -->
-        <nav aria-label="Site links" class="nav-links">
-          <a href="#why">Why</a>
-          <a href="#unlimited">Unlimited</a>
-          <a href="#process">Process</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#faq">FAQ</a>
-          <!-- Include Buttons Inside Hamburger Menu for Small Screens -->
-          <div class="nav-actions">
-            <button class="ghost" onclick="scrollToForm()">Want Proofs?</button>
-            <button class="btn" onclick="scrollToForm()">Book Call — ₹1999 Value</button>
-          </div>
-        </nav>
+      <div class="brand">
+        <div class="logo">MF</div>
+        <div style="line-height:1">
+          <div style="font-weight:800">MyProFunnels</div>
+          <div style="font-size:12px;color:var(--muted)">AI Funnels • Chatbot • IVR • LMS</div>
+        </div>
       </div>
-    </header>
-  </div>
-  <!--Hero Section-->
 
-<!-- HERO SECTION -->
-<div class="hero" role="main">
-  <div class="hero-left fade delay-1">
-    <div class="eyebrow">Attention Coaches, Consultants & Business Owners</div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    <h1>Is Your Funnel <span style="color:var(--gold)">Holding You Back?</span></h1>
+      <nav class="nav-links">
+        <a href="#why">Why</a>
+        <a href="#unlimited">Unlimited</a>
+        <a href="#process">Process</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
 
-    <div class="lead">
-      Stop wasting money on funnels that don't convert.
-      Upgrade to an all-in-one AI marketing & automation system
-      with chatbot, IVR, LMS and done-for-you funnels that perform 24/7.
+        <div class="nav-actions">
+          <button class="ghost" onclick="scrollToForm()">Want Proofs?</button>
+          <button class="btn" onclick="scrollToForm()">Book Call — ₹1999 Value</button>
+        </div>
+      </nav>
+
     </div>
+  </header>
 
-    <div class="cta-row">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">Attention Coaches, Consultants & Business Owners</div>
+      <h1>Is Your Funnel <span style="color:var(--gold)">Holding You Back?</span></h1>
+      <div class="lead">Stop wasting money on funnels that don't convert. Upgrade to an all-in-one AI marketing & automation system with chatbot, IVR, LMS and done-for-you funnels that perform 24/7.</div>
       <button class="btn" onclick="scrollToForm()">Book A Free One-On-One Call — ₹1999 Value</button>
-      <a class="ghost" href="#proofs" onclick="scrollTo('proofs')">Want To See Real Proofs?</a>
     </div>
 
-    <div class="mini-stats">
-      <div class="stat"><h4>3+</h4><p>Years of Services</p></div>
-      <div class="stat"><h4>150+</h4><p>Clients Served</p></div>
-      <div class="stat"><h4>200+</h4><p>Funnels Built</p></div>
-    </div>
-  </div>
-
-  <div class="hero-right fade delay-2">
-    <div class="device floaty" role="img" aria-label="Product mockup">
-      <!-- SVG mockup -->
-      <svg viewBox="0 0 800 520" width="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="display:block;border-radius:14px">
-        <defs>
-          <linearGradient id="g" x1="0" x2="1">
-            <stop offset="0" stop-color="#060606"/>
-            <stop offset="1" stop-color="#080808"/>
-          </linearGradient>
-        </defs>
-
-        <rect width="100%" height="100%" rx="14" fill="url(#g)"/>
-
-        <g transform="translate(36,40)">
-          <rect x="0" y="0" width="720" height="440" rx="14" fill="#060606" stroke="rgba(255,255,255,0.03)"/>
-
-          <text x="28" y="46" fill="#d4af37" font-family="Montserrat" font-size="28" font-weight="800">
-            MyProFunnels — Live Launch
-          </text>
-
-          <rect x="28" y="66" width="380" height="180" rx="12" fill="#070707" stroke="rgba(255,255,255,0.03)"/>
-          <text x="44" y="115" fill="#ffffff" font-family="Playfair Display" font-size="24">Done For You Funnel</text>
-          <text x="44" y="142" fill="#cfcfcf" font-size="16">Chatbot • IVR • LMS • Automations</text>
-
-          <g transform="translate(44,260)">
-            <rect x="0" y="0" width="350" height="140" rx="10" fill="#050505" stroke="rgba(212,175,55,0.08)"/>
-            <polyline points="12,110 90,64 168,92 240,46 320,80" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round"/>
-          </g>
-
-          <rect x="420" y="76" width="280" height="56" rx="10" fill="rgba(212,175,55,0.10)"/>
-          <text x="438" y="110" fill="#d4af37" font-size="18" font-weight="700">
-            Book Free Call — ₹1999 Value
-          </text>
-        </g>
-      </svg>
+    <div class="hero-right">
+      <div class="device">
+        <!-- SVG IMAGE -->
+      </div>
     </div>
   </div>
+
 </div>
-<!--ends her-->
 
-  <script>
-    // Function to toggle the hamburger menu
-    function toggleMenu() {
-      const hamburger = document.querySelector('.hamburger-menu');
-      const navLinks = document.querySelector('.nav-links');
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    }
+<script>
+function toggleMenu() {
+  document.querySelector('.hamburger-menu').classList.toggle('active');
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+function scrollToForm() {
+  const form = document.getElementById('form');
+  if (form) form.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
 
-    // Scroll to form (add your form ID or element)
-    function scrollToForm() {
-      window.scrollTo({ top: document.getElementById('form').offsetTop, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
