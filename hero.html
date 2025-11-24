@@ -434,8 +434,7 @@
     /*testimonial ends*/
     /*steps*/
   
-<style>
-  /* TIMELINE WRAPPER */
+<style>/* TIMELINE WRAPPER */
 .timeline {
   position: relative;
   padding: 40px 0;
@@ -444,17 +443,15 @@
   margin: auto;
 }
 
-/* NORMAL CENTER LINE FOR LARGE SCREENS */
-.timeline::before {
-  content: "";
+/* CENTER LINE */
+.timeline-line {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
   width: 4px;
   background: gold;
+  left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
 }
 
 /* TIMELINE ITEMS */
@@ -472,7 +469,7 @@
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
 }
 
-/* LARGE SCREEN LEFT/RIGHT */
+/* LEFT & RIGHT (LARGE SCREEN ONLY) */
 .timeline-item.left { left: 0; text-align: right; }
 .timeline-item.right { left: 50%; text-align: left; }
 
@@ -487,53 +484,36 @@
   border-radius: 50%;
   z-index: 3;
 }
-.timeline-item.left::before { right: -8px; }
-.timeline-item.right::before { left: -8px; }
 
-/* --------------------------------------------- */
-/* SMALL + MEDIUM SCREENS — PREMIUM SNAKE CURVE */
-/* --------------------------------------------- */
+.timeline-item.left::before {
+  right: -8px;
+}
+
+.timeline-item.right::before {
+  left: -8px;
+}
+
+/* -------- SMALL & MEDIUM SCREENS FIX -------- */
 
 @media (max-width: 850px) {
 
-  /* REMOVE vertical line (large screen only) */
-  .timeline::before {
-    display: none;
+  /* Keep line centered */
+  .timeline-line {
+    left: 50%;
   }
 
-  /* FULL WIDTH CARDS */
+  /* Make items full width */
   .timeline-item {
     width: 100%;
     left: 0 !important;
     text-align: left !important;
-    margin-bottom: 50px;
+    margin-bottom: 40px; /* space between cards */
   }
 
-  /* DOT CENTERED */
+  /* Gold dot stays centered */
   .timeline-item::before {
     left: 50% !important;
     transform: translateX(-50%);
-  }
-
-  /* SNAKE SVG LINE */
-  .snake-line {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 6px;
-    height: 100%;
-    transform: translateX(-50%);
-    overflow: visible;
-    z-index: 0;
-  }
-
-  .snake-line path {
-    fill: none;
-    stroke: gold;
-    stroke-width: 4px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
   }
 }
 
@@ -1037,16 +1017,29 @@ display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(2
   <!--testimonial ends-->
   <!--steps-->
 <section class="timeline">
-  <svg class="snake-line" viewBox="0 0 100 600" preserveAspectRatio="none">
-    <path d="" id="snakePath"></path>
-  </svg>
+  <div class="timeline-line"></div>
 
-  <div class="timeline-item left"><div class="content">Module 1 – Lead Magnet Funnel</div></div>
-  <div class="timeline-item right"><div class="content">Module 2 – AI Automation Setup</div></div>
-  <div class="timeline-item left"><div class="content">Module 3 – Follow-Up Machine</div></div>
-  <div class="timeline-item right"><div class="content">Module 4 – WhatsApp System</div></div>
-  <div class="timeline-item left"><div class="content">Module 5 – Booked Calls System</div></div>
+  <div class="timeline-item left">
+    <div class="content">Module 1 – Lead Magnet Funnel</div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="content">Module 2 – AI Automation Setup</div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="content">Module 3 – Follow-Up Machine</div>
+  </div>
+
+  <div class="timeline-item right">
+    <div class="content">Module 4 – WhatsApp System</div>
+  </div>
+
+  <div class="timeline-item left">
+    <div class="content">Module 5 – Booked Calls System</div>
+  </div>
 </section>
+
 
 
   <!--steps ends-->
@@ -1126,34 +1119,6 @@ const goTo = (i) => {
 
   <!--testimonila ends-->
   <!--steps-->
-  <script>
-function generateSnakeLine() {
-  const items = document.querySelectorAll(".timeline-item");
-  const path = document.getElementById("snakePath");
-
-  let d = "";
-  let lastX = 50;
-  let lastY = 0;
-
-  items.forEach((item, i) => {
-    const rect = item.getBoundingClientRect();
-    const offsetTop = item.offsetTop + rect.height * 0.5;
-
-    if (i === 0) {
-      d += `M 50,${offsetTop}`;
-    } else {
-      d += ` Q 50 ${lastY + 40}, 50 ${offsetTop}`;
-    }
-
-    lastY = offsetTop;
-  });
-
-  path.setAttribute("d", d);
-}
-
-window.addEventListener("load", generateSnakeLine);
-window.addEventListener("resize", generateSnakeLine);
-</script>
 
   <!--steps ends-->
 </body>
