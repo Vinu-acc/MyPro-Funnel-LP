@@ -136,22 +136,33 @@
       position: relative;
       top: -6px;
     }
-    nav {
-      display: flex;
-    }
 
-    /* Show the navigation links when menu is active */
+    /* Mobile Menu */
     .nav-links {
       display: flex;
       gap: 14px;
     }
 
+    /* Mobile version */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         gap: 12px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        border-radius: 12px;
+      }
+      .nav-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
       }
       .hamburger-menu {
         display: flex;
@@ -159,7 +170,7 @@
       .nav-links.active {
         display: flex;
       }
-      .nav-actions {
+      nav {
         display: none;
       }
     }
