@@ -433,9 +433,7 @@
 
     /*testimonial ends*/
     /*steps*/
-  
-<style>
-/* SECTION BASE */
+  /* SECTION */
 .timeline-section {
     width: 100%;
     padding: 80px 0;
@@ -461,14 +459,14 @@
     color: #ffd700;
 }
 
-/* TIMELINE WRAPPER */
+/* TIMELINE */
 .timeline {
     position: relative;
     width: 80%;
     margin: auto;
 }
 
-/* CENTER GOLD LINE (DESKTOP) */
+/* CENTER LINE — ALWAYS CENTER */
 .timeline::before {
     content: "";
     position: absolute;
@@ -476,6 +474,18 @@
     top: 0;
     width: 4px;
     height: 100%;
+    background: #333;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+/* PROGRESS BAR */
+.timeline-progress {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 0;
     background: linear-gradient(#d4af37, #ffd700);
     transform: translateX(-50%);
     border-radius: 4px;
@@ -500,63 +510,70 @@
     padding-left: 60px;
 }
 
-/* CONTENT BOX */
+/* CONTENT BOXES */
 .timeline-content {
     background: #111;
     padding: 25px;
     border-radius: 12px;
     border: 2px solid #d4af37;
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-}
-.timeline-content h3 {
-    color: #d4af37;
-    font-size: 22px;
-    margin-bottom: 10px;
+    box-shadow: 0 0 25px rgba(212,175,55,0.4);
+    width: 100%;            /* keeps card size same */
+    max-width: 400px;       /* perfect size on all screens */
 }
 
-/* GOLD CIRCLE */
+/* CENTER CIRCLES */
 .circle {
     position: absolute;
-    top: 35px;
-    left: 50%;
+    top: 40px;
     width: 26px;
     height: 26px;
     background: #111;
     border: 3px solid #d4af37;
     border-radius: 50%;
+    left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
 }
 
-/* RESPONSIVE FOR MOBILE */
+/* --------------------------- */
+/* RESPONSIVE FIXES BELOW     */
+/* --------------------------- */
+
 @media(max-width: 768px) {
 
-    .timeline {
-        width: 100%;
-        padding-left: 25px;
+    /* KEEP LINE CENTERED */
+    .timeline::before,
+    .timeline-progress {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    /* move the vertical line to left */
-    .timeline::before {
-        left: 25px;
-        transform: translateX(0);
-    }
-
+    /* ITEMS FULL WIDTH */
     .timeline-item {
         width: 100%;
-        padding-left: 50px;
-        padding-right: 0;
         margin-left: 0 !important;
-        text-align: left !important;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center !important;
     }
 
-    /* circle aligned left */
+    /* REMOVE ZIGZAG */
+    .timeline-item.left,
+    .timeline-item.right {
+        padding: 0;
+    }
+
+    /* CENTER CONTENT BOXES */
+    .timeline-content {
+        margin: 0 auto;
+        max-width: 420px; /* keeps same size */
+    }
+
+    /* CENTER CIRCLES */
     .circle {
-        left: 25px;
-        transform: translateX(0);
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
-</style>
 
   /*steps ends*/
   </style>
