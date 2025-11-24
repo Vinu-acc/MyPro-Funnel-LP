@@ -246,6 +246,71 @@
   .marq-item h4{margin:0;color:var(--gold)}
   .marq-item p{margin:0;color:var(--muted);font-size:13px}
     /*carausal ends*/
+    /* unlimited*/
+    /* Unlimited Grid Section */
+.unlimited-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 24px;
+  box-sizing: border-box;
+}
+
+/* Tile */
+.tile {
+  background: rgba(255,255,255,0.03);
+  border: 0.7px solid #d4af37;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: 0.25s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(212,175,55,0.10);
+}
+
+/* Icon */
+.tile svg {
+  width: 40px;
+  height: 40px;
+  stroke: #d4af37;
+  stroke-width: 1.4;
+}
+
+/* TILE TEXT */
+.tile h4 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.tile p {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .unlimited-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .unlimited-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+    /*unlimited ends*/
   </style>
 </head>
 <body>
@@ -498,6 +563,165 @@ display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(2
     </div>
   </div>
     <!--carausal ends-->
+  <!-- Unlimited Section -->
+<div class="section-title" style="text-align:center; margin-top:28px;">
+  <h2>Unlimited — What You Get</h2>
+</div>
+<div class="section-sub" style="text-align:center; margin-bottom:32px;">
+  Everything you need to scale — included in our premium plan.
+</div>
+
+<div class="unlimited-grid">
+
+  <!-- Tile 1 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="4" width="18" height="16" rx="2"/>
+      <path d="M3 10h18"/>
+    </svg>
+    <div>
+      <h4>Unlimited Landing Pages</h4>
+      <p>We build unlimited landing pages for every occasion.</p>
+    </div>
+  </div>
+
+  <!-- Tile 2 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M3 4h18v16H3z"/>
+      <path d="M3 10h18"/>
+    </svg>
+    <div>
+      <h4>Unlimited Websites</h4>
+      <p>Perfect for agencies developing & selling websites.</p>
+    </div>
+  </div>
+
+  <!-- Tile 3 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 6h16v12H4z"/>
+      <path d="M4 6l8 6 8-6"/>
+    </svg>
+    <div>
+      <h4>Unlimited Emails</h4>
+      <p>Unlimited email marketing from Day 1.</p>
+    </div>
+  </div>
+
+  <!-- Tile 4 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M21 2a10 10 0 0 0-18 8c0 1.8.5 3.5 1.5 5l-2 6 6-2c1.5 1 3.2 1.5 5 1.5a10 10 0 0 0 6-17z"/>
+      <path d="M16 12a4 4 0 0 1-6 0 4 4 0 0 1 0-6"/>
+    </svg>
+    <div>
+      <h4>Unlimited WhatsApp Messages</h4>
+      <p>Max attention, max conversions — unlimited WhatsApp.</p>
+    </div>
+  </div>
+
+  <!-- Tile 5 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M3 12h18"/>
+      <path d="M12 3v18"/>
+    </svg>
+    <div>
+      <h4>Unlimited Automations</h4>
+      <p>Automated workflows for everything you do.</p>
+    </div>
+  </div>
+
+  <!-- Tile 6 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <path d="M3 8h18"/>
+    </svg>
+    <div>
+      <h4>Unlimited Calendar Setup</h4>
+      <p>Perfect for coaches with 1-on-1 calls.</p>
+    </div>
+  </div>
+
+  <!-- Tile 7 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 4h16v16H4z"/>
+      <path d="M4 9h16"/>
+    </svg>
+    <div>
+      <h4>Unlimited Contact Forms</h4>
+      <p>Custom forms with payment systems included.</p>
+    </div>
+  </div>
+
+  <!-- Tile 8 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 4h16v16H4z"/>
+      <path d="M8 4v16"/>
+    </svg>
+    <div>
+      <h4>Unlimited Contacts Storage</h4>
+      <p>Store unlimited leads in a structured system.</p>
+    </div>
+  </div>
+
+  <!-- Tile 9 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M6 12h12"/>
+      <path d="M12 6v12"/>
+    </svg>
+    <div>
+      <h4>Unlimited Surveys</h4>
+      <p>Run unlimited surveys for research & insights.</p>
+    </div>
+  </div>
+
+  <!-- Tile 10 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 2l7 4-7 4-7-4 7-4z"/>
+      <path d="M5 10v10l7 4 7-4V10"/>
+    </svg>
+    <div>
+      <h4>Unlimited LMS</h4>
+      <p>Secure LMS for online training & courses.</p>
+    </div>
+  </div>
+
+  <!-- Tile 11 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M3 4h18v16H3z"/>
+      <path d="M3 10h18"/>
+      <path d="M12 4v16"/>
+    </svg>
+    <div>
+      <h4>Unlimited Hosting Space</h4>
+      <p>Host unlimited content — only domain needed.</p>
+    </div>
+  </div>
+
+  <!-- Tile 12 -->
+  <div class="tile">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M4 7h16v10H4z"/>
+      <path d="M4 12h16"/>
+      <path d="M10 7v10"/>
+    </svg>
+    <div>
+      <h4>Unlimited Payments</h4>
+      <p>Stripe activation in 10 minutes. Only 2% fees.</p>
+    </div>
+  </div>
+
+</div>
+<!--unlomited ends-->
 <script>
 function toggleMenu() {
   document.querySelector('.hamburger-menu').classList.toggle('active');
