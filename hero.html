@@ -574,6 +574,77 @@
 }
 </style>
   /*steps ends*/
+  /*faq*/
+  
+<style>
+.faq-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 0;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+.faq-heading h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* FAQ ITEM */
+.faq-item {
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* QUESTION BUTTON */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #111;
+  color: #d4af37;
+  border: none;
+  outline: none;
+  transition: background 0.3s;
+}
+.faq-question:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* ANSWER */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #222;
+  padding: 0 20px;
+}
+.faq-answer p {
+  margin: 15px 0;
+  color: #fff;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-answer {
+  max-height: 500px; /* enough to show content */
+}
+</style>
+
+/*faq ends*/
   </style>
 </head>
 <body>
@@ -1138,11 +1209,105 @@ display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(2
     </div>
 
 </section>
-
-
-
-
   <!--steps ends-->
+  <!--FAQ-->
+  <!-- FAQ Section -->
+<section class="faq-section">
+  <div class="faq-heading">
+    <h2>You have Questions? We Have Answers</h2>
+  </div>
+
+  <div class="faq-container">
+
+    <!-- FAQ Item -->
+    <div class="faq-item">
+      <button class="faq-question">What services are included in the "All-in-One Digital Marketing & Automation Tool"?</button>
+      <div class="faq-answer">
+        <p>Our All-in-One Digital Marketing & Automation Tool includes a comprehensive suite of services, such as unlimited landing pages, websites, emails, WhatsApp messages, automations, contact forms, hosting space, and more. You also get access to advanced features like AI-powered chatbots, IVR systems, and an unlimited LMS (Learning Management System) for online training.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the cost of the services?</button>
+      <div class="faq-answer">
+        <p>The total value of these services is ₹89,500 per month, but we are offering these tools for only ₹12,000 + GST (One-Time) with no hidden costs. You will also get access to FREE Bonuses valued at up to ₹1,00,000.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What do you mean by "Unlimited" services?</button>
+      <div class="faq-answer">
+        <p>Our services are truly unlimited, meaning there are no restrictions on the number of landing pages, websites, emails, WhatsApp messages, or other features. You can scale your business as much as you need without worrying about limits.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How soon can I launch my course using this platform?</button>
+      <div class="faq-answer">
+        <p>You can launch your course within 30 minutes! We provide done-for-you services to ensure that your course and all related marketing tools are set up efficiently. Our expert team will guide you through every step of the process.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do I need technical knowledge to use these tools?</button>
+      <div class="faq-answer">
+        <p>No! Our platform is designed to be user-friendly and intuitive. You do not need any technical expertise to use our system. We offer live support and hands-on training to help you manage everything smoothly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What’s the process for booking a free one-on-one call?</button>
+      <div class="faq-answer">
+        <p>To book your FREE one-on-one consultation (₹1999 value), simply click on the "Book A Free Call" button on this page. You’ll be able to schedule a time that works best for you, and we’ll guide you through how to launch your course and grow your business.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I customize the landing pages and websites for my business?</button>
+      <div class="faq-answer">
+        <p>Absolutely! You have full customization options for all landing pages and websites, ensuring they align with your branding and business needs. Our platform is flexible and allows you to tailor everything to your specific requirements.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Are there any long-term commitments?</button>
+      <div class="faq-answer">
+        <p>No, there are no long-term commitments. You can choose to cancel or stop using the services at any time. However, we believe the value we offer will help you grow your business in ways that exceed your expectations.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What happens if I need support?</button>
+      <div class="faq-answer">
+        <p>We provide unlimited live support to ensure you get immediate help whenever you need it. Our experienced team is available to assist you with any questions or issues, ensuring your business runs smoothly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I get started?</button>
+      <div class="faq-answer">
+        <p>Describe the item or answer the question so that site visitors who are interested get more information. You can emphasize this text with bullets, italics or bold, and add links.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Are there any hidden charges or additional costs?</button>
+      <div class="faq-answer">
+        <p>No, there are no hidden charges. The one-time fee of ₹12,000 + GST gives you access to all the tools and services we offer. The only additional cost is a small processing fee of 2% for payments, which is one of the lowest in the industry.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What if I am not satisfied with the services?</button>
+      <div class="faq-answer">
+        <p>We offer a refund policy if you are not completely satisfied with our services. We strive for your success and are committed to providing quality support to meet your business goals.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!--faq ends-->
 <script>
 function toggleMenu() {
   document.querySelector('.hamburger-menu').classList.toggle('active');
@@ -1221,5 +1386,27 @@ const goTo = (i) => {
   <!--steps-->
 
   <!--steps ends-->
+  <!--faq-->
+  
+<script>
+// COLLAPSIBLE FAQ SCRIPT
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    // Toggle active class
+    item.classList.toggle('active');
+
+    // Optionally close other open items
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
+      }
+    });
+  });
+});
+</script>
+  <!--faq ends-->
 </body>
 </html>
