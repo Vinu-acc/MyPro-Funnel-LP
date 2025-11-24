@@ -433,7 +433,8 @@
 
     /*testimonial ends*/
     /*steps*/
-  <style>
+  
+<style>
 /* SECTION BASE */
 .timeline-section {
     width: 100%;
@@ -478,6 +479,7 @@
     background: linear-gradient(#d4af37, #ffd700);
     transform: translateX(-50%);
     border-radius: 4px;
+    z-index: 1;
 }
 
 /* TIMELINE ITEMS */
@@ -485,6 +487,7 @@
     width: 50%;
     padding: 25px 0;
     position: relative;
+    z-index: 2; /* appear above the line */
 }
 
 /* LEFT SIDE */
@@ -506,7 +509,10 @@
     border-radius: 12px;
     border: 2px solid #d4af37;
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    position: relative;
 }
+
+/* TITLE */
 .timeline-content h3 {
     color: #d4af37;
     font-size: 22px;
@@ -531,28 +537,39 @@
 @media(max-width: 768px) {
 
     .timeline {
-        width: 100%;
-        padding-left: 25px;
+        width: 90%;
+        margin: auto;
+        padding: 0;
     }
 
-    /* move the vertical line to left */
     .timeline::before {
-        left: 25px;
-        transform: translateX(0);
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 50px;
-        padding-right: 0;
+        padding: 20px 0;
+        text-align: center;
         margin-left: 0 !important;
-        text-align: left !important;
     }
 
-    /* circle aligned left */
+    /* Zigzag effect: slightly left or right of center */
+    .timeline-item.left .timeline-content {
+        transform: translateX(-10%);
+    }
+    .timeline-item.right .timeline-content {
+        transform: translateX(10%);
+    }
+
+    .timeline-content {
+        display: inline-block;
+        max-width: 90%;
+    }
+
     .circle {
-        left: 25px;
-        transform: translateX(0);
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 </style>
@@ -1121,6 +1138,8 @@ display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(2
     </div>
 
 </section>
+
+
 
 
   <!--steps ends-->
