@@ -310,9 +310,129 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-
     /*unlimited ends*/
+    /*testimonial*/
+    
+<style>
+  body { background:#111; font-family:sans-serif; }
+  .section-title {
+    text-align:center;
+    font-size:28px;
+    margin-top:28px;
+    margin-bottom:24px;
+    color:#fff;
+  }
+
+  /* Wrapper for slider & arrows */
+  .testimonial-wrapper {
+    position:relative;
+    width:90%;
+    max-width:800px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .testimonial-slider {
+    overflow:hidden;
+    width:100%;
+  }
+
+  .testimonial-track {
+    display:flex;
+    transition:transform 0.5s ease;
+  }
+
+  .testimonial-card {
+    display:flex;
+    min-width:100%;
+    align-items:center;
+    position:relative;
+  }
+
+  .testimonial-image {
+    flex:1;
+    height:350px;
+    background:linear-gradient(135deg,#d4af37, rgba(212,175,55,0.5));
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .testimonial-image .avatar {
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:2px solid #d4af37;
+    background:#000;
+    color:#ffd700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:24px;
+  }
+
+  .testimonial-text {
+    flex:1.5;
+    background:#000000;
+    color:#fff;
+    border:2px solid #d4af37;
+    border-radius:16px;
+    padding:20px;
+    margin-left:-60px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .testimonial-text .stars { color:#ffd700; margin-bottom:8px; font-size:16px; }
+  .testimonial-text p { margin:0 0 12px; color:#cfcfcf; font-size:15px; line-height:1.5; }
+  .testimonial-text strong { font-size:16px; margin-bottom:2px; }
+  .testimonial-text span { font-size:14px; color:#d0d0d0; }
+
+  /* Arrows */
+  .testimonial-wrapper .nav {
+    background:rgba(212,175,55,0.9);
+    border:none;
+    color:#000;
+    font-size:24px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:5;
+    margin:0 20px;
+  }
+
+  /* Responsive — Medium Screens */
+  @media(max-width:700px){
+    .testimonial-card { flex-direction:column; }
+    .testimonial-text { margin-left:0; margin-top:-40px; }
+    .testimonial-image { height:250px; }
+  }
+
+  /* Fix — Arrows closer on small phones */
+  @media(max-width:480px){
+    .testimonial-wrapper .nav {
+      margin:0 10px;
+    }
+  }
+
+  /* Fix — Overlap removed for very small screens */
+  @media(max-width:420px){
+    .testimonial-text {
+      margin-left:0 !important;
+      margin-top:-20px;
+    }
+  }
+</style>
+
+    /*testimonial ends*/
+    
   </style>
 </head>
 <body>
@@ -724,6 +844,91 @@ display:flex;flex-direction:column;align-items:center;box-shadow:0 0 25px rgba(2
 
 </div>
 <!--unlomited ends-->
+  <!--testimonial-->
+<div class="wrap">
+  <h2 class="section-title">What Our Clients Say</h2>
+
+  <div class="testimonial-wrapper">
+    <button class="nav prev">&lt;</button>
+
+    <div class="testimonial-slider">
+      <div class="testimonial-track">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <div class="avatar">AM</div>
+          </div>
+          <div class="testimonial-text">
+            <div class="stars">★★★★★</div>
+            <p>"My revenue doubled in 90 days. The DFY funnel + chatbot handled leads while I taught. Professional team."</p>
+            <strong>Ashwin M.</strong>
+            <span>Coach — Wellness</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <div class="avatar">SS</div>
+          </div>
+          <div class="testimonial-text">
+            <div class="stars">★★★★★</div>
+            <p>"Smooth onboarding, fast launch. Their IVR reduced no-shows and calendar bookings improved 3x."</p>
+            <strong>Sana S.</strong>
+            <span>Consultant — HR</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <div class="avatar">RK</div>
+          </div>
+          <div class="testimonial-text">
+            <div class="stars">★★★★★</div>
+            <p>"Reseller-friendly and stable. Unlimited pages & hosting saved us thousands."</p>
+            <strong>Rohit K.</strong>
+            <span>Agency Owner</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <div class="avatar">LP</div>
+          </div>
+          <div class="testimonial-text">
+            <div class="stars">★★★★★</div>
+            <p>"The team handled my campaigns end-to-end. I could focus on coaching while they managed leads."</p>
+            <strong>Lakshmi P.</strong>
+            <span>Business Coach</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <div class="avatar">TM</div>
+          </div>
+          <div class="testimonial-text">
+            <div class="stars">★★★★★</div>
+            <p>"Amazing results with minimal effort. The DFY funnels are a game-changer for small agencies."</p>
+            <strong>Tanvi M.</strong>
+            <span>Digital Marketer</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="nav next">&gt;</button>
+  </div>
+</div>
+
+
+  
+  <!--testimonial ends-->
 <script>
 function toggleMenu() {
   document.querySelector('.hamburger-menu').classList.toggle('active');
@@ -780,5 +985,24 @@ const goTo = (i) => {
 })();
 </script>
 <!--why choose ends-->
+  <!--testimonial her-->
+  <script>
+  const track = document.querySelector('.testimonial-track');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  let index = 0;
+
+  prev.addEventListener('click', () => {
+    if(index > 0) index--;
+    track.style.transform = `translateX(${-index * 100}%)`;
+  });
+
+  next.addEventListener('click', () => {
+    if(index < track.children.length - 1) index++;
+    track.style.transform = `translateX(${-index * 100}%)`;
+  });
+</script>
+
+  <!--testimonila ends-->
 </body>
 </html>
